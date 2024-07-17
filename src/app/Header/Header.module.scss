@@ -1,0 +1,143 @@
+.header {
+   margin: 24px 0 0 0;
+   color: #fff;
+   font-weight: 700;
+   font-size: 18px;
+   position: absolute;
+   height: 66px;
+   width: 100%;
+   left: 0;
+   top: 0;
+   z-index: 10;
+   font-family: var(--gilroyFont);
+   @media (max-width: 380px) {
+      margin: 0;
+   }
+}
+.main {
+   height: 66px;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   @media (max-width: 880px) {
+      justify-content: space-between;
+   }
+   @media (max-width: 520px) {
+      justify-content: initial;
+   }
+}
+.burger {
+   display: none;
+   @media (max-width: 880px) {
+      margin-left: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: inherit;
+      gap: 5px;
+   }
+   @media (max-width: 380px) {
+      margin-left: 10px;
+   }
+   & span {
+      width: 30px;
+      height: 3px;
+      background: #fff;
+   }
+}
+.logo {
+   position: relative;
+   max-width: 122px;
+   width: 100%;
+   aspect-ratio: 122/66;
+   @media (max-width: 930px) {
+      max-width: 80px;
+   }
+}
+.content {
+   margin-left: 230px;
+   display: flex;
+   @media (max-width: 1260px) {
+      margin-left: 100px;
+   }
+   @media (max-width: 1130px) {
+      margin-left: 20px;
+   }
+   @media (max-width: 380px) {
+      margin-left: 10px;
+   }
+}
+.nav {
+   font-size: 18px;
+   font-weight: 700;
+   display: flex;
+   align-items: center;
+   @media (max-width: 880px) {
+      display: none;
+   }
+   &__list {
+      display: flex;
+      gap: 45px;
+      @media (max-width: 1060px) {
+         gap: 15px;
+      }
+   }
+   &__item {
+      transition: 0.25s;
+      border-bottom: 1px solid transparent;
+      @media (min-width: 768px) {
+         &:hover {
+            border-bottom: 1px solid #fff;
+         }
+      }
+   }
+}
+
+.search {
+   margin-left: 39px;
+   height: 41px;
+   border: 1px solid #ffffff;
+   border-radius: 20px;
+   display: flex;
+   align-items: center;
+   padding: 15px 9px;
+   max-width: 248px;
+   @media (max-width: 520px) {
+      margin-left: 10px;
+      max-width: 200px;
+   }
+   @media (max-width: 440px) {
+      max-width: 150px;
+   }
+   &__icon {
+      fill: #000;
+   }
+   &__inputContainer {
+      margin-left: 24px;
+      overflow: hidden;
+      @media (max-width: 380px) {
+         margin-left: 0px;
+      }
+   }
+   &__input {
+      font-size: 18px;
+      color: #fff;
+      background: transparent;
+   }
+}
+
+.toggleLanguage {
+   font-weight: 700;
+   font-size: 18px;
+   color: #fff;
+   margin-left: 15px;
+   display: flex;
+   gap: 11px;
+   background: inherit;
+   justify-content: center;
+   align-items: center;
+   @media (max-width: 380px) {
+      margin-left: 10px;
+   }
+}

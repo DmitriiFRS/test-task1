@@ -1,0 +1,117 @@
+.footer {
+   background: #231e1e;
+   margin-top: -138px;
+   font-family: var(--font-tenor-sans);
+   &__container {
+      position: relative;
+   }
+}
+.bgImg {
+   position: absolute;
+   top: -20px;
+   left: 42%;
+   width: 100%;
+   max-width: 311px;
+   height: 384px;
+   mix-blend-mode: color-dodge;
+}
+.main {
+   margin: 50px 0 95px 0;
+   display: flex;
+   font-size: 20px;
+   position: relative;
+   z-index: 1;
+   @media (max-width: 800px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "logo nav" "address contacts";
+      gap: 40px 60px;
+      padding: 0 30px;
+   }
+   @media (max-width: 620px) {
+      grid-template-columns: 1fr;
+      grid-template-areas: "nav" "address" "contacts" "logo";
+      place-content: center;
+      place-items: center;
+   }
+}
+.address {
+   margin-left: 100px;
+   display: flex;
+   flex-direction: column;
+   gap: 55px;
+   max-width: 400px;
+   @media (max-width: 1000px) {
+      margin-left: 40px;
+   }
+   @media (max-width: 800px) {
+      grid-area: address;
+      margin-left: 0;
+   }
+   &__item {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+   }
+}
+.nav {
+   margin-left: 196px;
+   @media (max-width: 1000px) {
+      margin-left: 40px;
+   }
+   @media (max-width: 800px) {
+      grid-area: nav;
+      margin-left: 0;
+   }
+   &__list {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 15px;
+      @media (max-width: 620px) {
+         align-items: center;
+      }
+   }
+   &__item {
+      transition: 0.25s;
+      @media (min-width: 768px) {
+         &:hover {
+            color: #2c00a5;
+         }
+      }
+   }
+}
+.contacts {
+   margin-left: 77px;
+   @media (max-width: 1000px) {
+      margin-left: 40px;
+   }
+   @media (max-width: 800px) {
+      grid-area: contacts;
+      margin-left: 0;
+   }
+   &__list {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 15px;
+      white-space: nowrap;
+      @media (max-width: 620px) {
+         align-items: center;
+      }
+   }
+   &__icons {
+      display: flex;
+      gap: 24px;
+   }
+}
+.logo {
+   position: relative;
+   max-width: 122px;
+   width: 100%;
+   max-height: 66px;
+   aspect-ratio: 122/66;
+   @media (max-width: 800px) {
+      grid-area: logo;
+   }
+}

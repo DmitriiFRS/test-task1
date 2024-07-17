@@ -1,0 +1,124 @@
+.section {
+   position: relative;
+   height: 839px;
+   font-family: var(--font-tenor-sans);
+   @media (max-width: 420px) {
+      height: 1000px;
+   }
+}
+.bgImage {
+   margin-top: -139px;
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   z-index: 1;
+}
+.main {
+   margin: 0px 0 100px 0;
+   position: relative;
+   z-index: 1;
+}
+.title {
+   margin-top: 139px;
+   font-size: 48px;
+   color: #000;
+   @media (max-width: 420px) {
+      margin-top: 40px;
+   }
+   @media (max-width: 540px) {
+      font-size: 40px;
+   }
+}
+.description {
+   color: #000;
+   font-size: 32px;
+   max-width: 875px;
+   margin-top: 20px;
+   @media (max-width: 540px) {
+      font-size: 28px;
+   }
+}
+
+.cols {
+   margin-top: 87px;
+   height: 324px;
+   display: flex;
+   gap: 27px;
+   @media (max-width: 980px) {
+      height: 250px;
+   }
+   @media (max-width: 800px) {
+      height: 200px;
+   }
+   @media (max-width: 660px) {
+      height: 180px;
+      gap: 12px;
+   }
+   @media (max-width: 530px) {
+      height: 150px;
+   }
+   @media (max-width: 420px) {
+      flex-direction: column;
+      height: 480px;
+      align-items: center;
+      margin-top: 40px;
+   }
+   &__item {
+      flex: 0 1 33.333%;
+      position: relative;
+      height: 100%;
+      border-radius: 8.856px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 25px 27px 24px 27px;
+      @media (min-width: 768px) {
+         &:hover .cols__item__img {
+            transform: scale(1.1);
+         }
+      }
+      @media (max-width: 660px) {
+         padding: 12px;
+      }
+      @media (max-width: 420px) {
+         width: 200px;
+      }
+      &__img {
+         transition: 0.25s;
+         position: absolute;
+         left: 0;
+         top: 0;
+         width: 100%;
+         height: 100%;
+      }
+      &__title {
+         position: relative;
+         z-index: 1;
+         font-size: 26.569px;
+         max-width: 280px;
+         @media (max-width: 850px) {
+            font-size: 20px;
+         }
+         @media (max-width: 600px) {
+            font-size: 16px;
+         }
+      }
+      &__read {
+         font-size: 26.569px;
+         position: relative;
+         z-index: 1;
+         display: flex;
+         align-items: center;
+         gap: 17px;
+         @media (max-width: 850px) {
+            font-size: 20px;
+         }
+         @media (max-width: 600px) {
+            font-size: 16px;
+         }
+      }
+   }
+}
