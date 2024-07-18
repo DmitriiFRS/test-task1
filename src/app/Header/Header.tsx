@@ -1,11 +1,12 @@
-import styles from "./Header.module.scss";
+import styles from "./Styles/Header.module.scss";
 import Image from "next/image";
 import logo from "../../../public/Img/Header/logo.png";
 import magnifyingGlass from "../../../public/Img/Header/search.svg";
 import chevron from "../../../public/Img/Header/chevronDown.svg";
 import Link from "next/link";
+import MobileComponent from "./MobileComponent";
 
-const nav = [
+export const nav = [
    {
       id: 0,
       title: "Главная",
@@ -67,11 +68,7 @@ function header() {
                      <span>Ру</span>
                      <Image src={chevron} alt="chevron" height={12} width={12} />
                   </button>
-                  <button className={styles.burger}>
-                     <span></span>
-                     <span></span>
-                     <span></span>
-                  </button>
+                  <MobileComponent />
                </div>
             </div>
          </div>

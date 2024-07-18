@@ -6,28 +6,26 @@ import arrow from "../../../public/Img/Main/arrow-right.svg";
 import bg from "../../../public/Img/Main/secondSectionBG.jpg";
 import Image from "next/image";
 import Link from "next/link";
+import Cols from "./Cols";
 
-const cols = [
+export const cols = [
    {
       id: 0,
-      title: "",
+      title: "Почему следует принимать травы?",
       img: col1Img,
       href: "/",
-      isRead: false,
    },
    {
       id: 1,
       title: "Почему следует принимать пищевые добавки?",
       img: col2Img,
       href: "/",
-      isRead: true,
    },
    {
       id: 2,
       title: "Пищевые ингредиенты Европа 2023 Франкфурт",
       img: col3Img,
       href: "/",
-      isRead: true,
    },
 ];
 
@@ -43,24 +41,7 @@ function SecondSection() {
                <p className={styles.description}>
                   На нашем сайте мы публикуем новости отрасли и исследовательские статьи. Будьте в курсе новостей и интересных статей.
                </p>
-               <div className={styles.cols}>
-                  {cols.map((col) => {
-                     return (
-                        <Link style={{ color: "inherit" }} href={col.href} className={styles.cols__item} key={col.id}>
-                           <div className={styles.cols__item__img}>
-                              <Image src={col.img} alt="bg-image" fill style={{ objectFit: "cover" }} />
-                           </div>
-                           <div className={styles.cols__item__title}>{col.title}</div>
-                           {col.isRead && (
-                              <div className={styles.cols__item__read}>
-                                 <span>Читать</span>
-                                 <Image src={arrow} alt="arrow" width={43} height={24} />
-                              </div>
-                           )}
-                        </Link>
-                     );
-                  })}
-               </div>
+               <Cols cols={cols} />
             </div>
          </div>
       </section>

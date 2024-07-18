@@ -75,6 +75,19 @@
       flex-direction: column;
       justify-content: space-between;
       padding: 25px 27px 24px 27px;
+      &__active {
+         &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.67) 0%, rgba(0, 0, 0, 0.67) 100%), lightgray 50% / cover no-repeat;
+            opacity: 0.4;
+            z-index: 1;
+         }
+      }
       @media (min-width: 768px) {
          &:hover .cols__item__img {
             transform: scale(1.1);
