@@ -141,3 +141,47 @@
       margin-left: 10px;
    }
 }
+.language {
+   display: flex;
+   align-items: center;
+   position: relative;
+   &__dropdown {
+      position: absolute;
+      right: 22.5%;
+      top: 40px;
+      width: auto;
+      height: auto;
+      border-radius: 20px;
+      padding: 10px;
+      background: #1a1a1a;
+      display: none;
+      &__active {
+         display: block;
+      }
+      &__list {
+         display: flex;
+         flex-direction: column;
+         gap: 10px;
+      }
+      &__item {
+      }
+      &__btn {
+         width: 100%;
+         height: 100%;
+         background: inherit;
+         color: #fff;
+         font-weight: 700;
+         font-size: 16px;
+         &__active {
+            opacity: 0.5;
+         }
+      }
+   }
+}
+.chevron {
+   transform: rotate(0deg);
+   transition: 0.3s;
+   &__active {
+      transform: rotate(180deg);
+   }
+}

@@ -5,6 +5,7 @@ import magnifyingGlass from "../../../public/Img/Header/search.svg";
 import chevron from "../../../public/Img/Header/chevronDown.svg";
 import Link from "next/link";
 import MobileComponent from "./MobileComponent";
+import Language from "./Language";
 
 export const nav = [
    {
@@ -64,10 +65,7 @@ function header() {
                         <input className={styles.search__input} type="text" name="search" placeholder="Поиск..." />
                      </div>
                   </div>
-                  <button aria-label="language toggler" className={styles.toggleLanguage}>
-                     <span>Ру</span>
-                     <Image src={chevron} alt="chevron" height={12} width={12} />
-                  </button>
+                  <Language />
                   <MobileComponent />
                </div>
             </div>
